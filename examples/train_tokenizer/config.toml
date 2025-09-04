@@ -1,0 +1,14 @@
+input = "examples/data/train_tokenizer.jsonl"
+model_prefix = "spm"
+vocab_size = 1000
+input_sentence_size = 2000000
+shuffle_input_sentence = true
+pad_id = 0
+eos_id = 1
+unk_id = 2
+bos_id = -1
+pad_piece = "<pad>"
+unk_piece = "<unk>"
+eos_piece = "</s>"
+character_coverage = 1.0
+model_type = "unigram"

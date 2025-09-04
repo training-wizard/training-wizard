@@ -1,0 +1,114 @@
+site_name: "Training Wizard"
+site_dir: public
+repo_url: https://github.com/quillbot-labs/training-wizard-oss
+repo_name: quillbot-labs/training-wizard-oss
+
+copyright: |
+    © 2025 Training Wizard —
+    Documentation licensed under 
+    <a href="https://creativecommons.org/licenses/by/4.0/">
+      <img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="height:16px; vertical-align:middle;">
+      CC BY 4.0
+    </a>
+
+extra_css:
+  - assets/style.css
+
+theme:
+  name: "material"
+  features:
+    - navigation.indexes
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - header.autohide
+    - toc.follow
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  nav_style: dark
+  icon:
+    annotation: material/information-outline
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+extra:
+  generator: false
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - abbr
+  - attr_list
+  - toc:
+      permalink: "¤"
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+  - section-index
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [training_wizard]
+          options:
+            members_order: source
+            inherited_members: true
+            docstring_section_style: list
+            show_source: true
+            show_category_heading: true
+            group_by_category: true
+            show_submodules: true
+            show_signature_annotations: true
+            show_symbol_type_heading: true
+            signature_crossrefs: true
+            show_root_toc_entry: false
+
+nav:
+  - Home:
+    - About: index.md
+    - Usage: home/usage.md
+  - Concepts:
+    - About: concepts/index.md
+    - Managing Complexity: concepts/complexity.md
+    - Recipes: concepts/recipe.md
+    - TOML Configs: concepts/toml_config.md
+    - Specs: concepts/spec.md
+  - For Developers:
+    - About: develop/index.md
+    - Coding conventions: develop/coding_conventions.md
+    - VS Code Tips: develop/vs-code.md
+    - Pydantic Troubleshooting: develop/pydantic.md
+    - Regular Expressions in Python: develop/regex-python.md
+  - Legal Terms: legal_terms.md

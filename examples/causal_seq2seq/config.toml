@@ -1,0 +1,46 @@
+spec_class = "training_wizard.recipes.modular.ModularTrainingSpec"
+validation = 5
+
+[wizard_module]
+spec_class = "training_wizard.specs.modules.causal_seq2seq.CausalSeq2SeqModule"
+peek_rate = 100
+eval_sample_size = 1
+separator_token = "<sep>"
+
+[wizard_module.generation_args]
+max_new_tokens = 256
+do_sample = false
+stop_strings = "\n\n"
+
+[wizard_module.transformer_spec]
+pretrained_name = "llamafactory/tiny-random-Llama-3"
+
+[wizard_module.transformer_spec.tokenizer_init_kwargs]
+padding_side = "left"
+
+[wizard_module.transformer_spec.tokenizer_call_kwargs]
+max_length = 512
+truncation = true
+
+[dataset_spec]
+spec_class = "training_wizard.specs.dataset.SimpleDataSourceSpec"
+data_files = "examples/data/seq2seq.jsonl"
+
+[training_args_spec]
+run_name = "Paraphraser Qwen2.5 Instruct 0.5B"
+output_dir = "examples/causal_seq2seq/output"
+warmup_steps = 2500
+num_train_epochs = 1
+per_device_train_batch_size = 2
+per_device_eval_batch_size = 2
+bf16 = true
+optim = "adamw_bnb_8bit"
+learning_rate = 1e-5
+gradient_checkpointing = true
+neftune_noise_alpha = 5
+torch_compile = true
+
+[callbacks_spec]
+enable_early_stopping = true
+early_stopping_patience = 2
+evaluate_first_step = false

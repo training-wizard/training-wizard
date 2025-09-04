@@ -1,0 +1,46 @@
+spec_class = "training_wizard.recipes.modular.ModularTrainingSpec"
+validation = 0.1
+
+[wizard_module]
+spec_class = "training_wizard.specs.modules.t5_pretrain.T5PretrainModule"
+peek_rate = 100
+peek_sample_size = 1
+
+[wizard_module.generation_args]
+max_new_tokens = 128
+do_sample = false
+
+[wizard_module.transformer_spec]
+pretrained_name = "google-t5/t5-small"
+tokenizer_special_tokens = { "mask_token" = "<mask>" }
+
+[wizard_module.transformer_spec.tokenizer_init_kwargs]
+use_fast = false
+legacy = false
+
+[wizard_module.transformer_spec.tokenizer_call_kwargs]
+max_length = 256
+truncation = true
+padding = "max_length"
+
+[dataset_spec]
+spec_class = "training_wizard.specs.dataset.SimpleDataSourceSpec"
+data_files = "examples/data/es_pretrain.jsonl"
+
+[training_args_spec]
+run_name = "T5 Continued Pretraining Example - ES"
+output_dir = "examples/t5_pretrain/output"
+warmup_steps = 100
+num_train_epochs = 1
+per_device_train_batch_size = 16
+per_device_eval_batch_size = 16
+optim = "paged_adamw_32bit"
+learning_rate = 1e-5
+gradient_checkpointing = false
+gradient_accumulation_steps = 4
+neftune_noise_alpha = 0
+torch_compile = true
+
+[callbacks_spec]
+enable_early_stopping = false
+evaluate_first_step = true

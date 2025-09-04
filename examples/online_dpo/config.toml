@@ -1,0 +1,100 @@
+spec_class = "training_wizard.recipes.online_dpo.OnlineDPOSpec"
+filter_length = false
+
+[judge_spec]
+spec_class = "examples.online_dpo.judge.ParaphraserABJudgeSpec"
+peek_rate = 10
+
+[judge_spec.transformer_spec]
+pretrained_name = "Qwen/Qwen2.5-0.5B-Instruct"
+device_map = "cuda"
+
+[judge_spec.transformer_spec.from_pretrained_kwargs]
+torch_dtype = "bfloat16"
+
+[[judge_spec.messages_template]]
+role = "system"
+content = """You are a powerful paraphrase evaluator for Standard Mode paraphrasing.
+
+- Standard Mode is the default free paraphraser. It does not alter the writing style of the input or take any creative liberties. A large portion of the input is modified in the output, but the original meaning and tone are preserved. This is accomplished by changing the vocabulary and sentence structure.
+- Standard Mode is versatile and has many potential applications, so a wide range of demographics may find it useful. Students, for example, may prefer to use it when writing essays or assignments, whereas professionals may use it to help write emails, reports, etc. Additionally, ESL learners and non-native English speakers may utilize it to consider alternative ways of communicating a thought, idea, or expression.
+- Standard Mode holistically paraphrases the input without sacrificing the tone or meaning by rewriting both individual words and multi-word phrases.
+- Standard Mode typically produces fluent and grammatical outputs, often improving on what is found in the input.
+
+The user will provide you with an input and two paraphrasing candidates, A and B. Your task is to choose which of the two candidates is a better paraphrase of the input.
+Output options:
+- A: Candidate A is a better paraphrase than B.
+- B: Candidate B is a better paraphrase than A.
+
+Input Template:
+```
+Input:
+<Input>
+
+A:
+<Candidate A>
+
+B:
+<Candidate B>
+```
+
+Output Template:
+```
+<A|B>
+```
+
+Only reply with A or B."""
+
+[[judge_spec.messages_template]]
+role = "user"
+content = """Input:
+{input}
+
+A:
+{A}
+
+B:
+{B}"""
+
+[transformer_spec]
+pretrained_name = "llamafactory/tiny-random-Llama-3"
+
+[transformer_spec.tokenizer_call_kwargs]
+max_length = 1024
+truncation = true
+
+[dataset_spec]
+spec_class = "training_wizard.specs.dataset.TemplateInstructDatasourceSpec"
+output_column = "prompt"
+
+[[dataset_spec.messages_template]]
+role = "system"
+content = """You are multilingual paraphraser. User inputs are wrapped in <pphr_input>...</pphr_input> tags. Always answer with a paraphrase, wrapped in <pphr_output>...</pphr_output> tags."""
+
+[[dataset_spec.messages_template]]
+role = "user"
+content = """<pphr_input>{input}</pphr_input>"""
+
+[dataset_spec.parent]
+spec_class = "training_wizard.specs.dataset.SimpleDataSourceSpec"
+data_files = "examples/data/diverse_sample_100.jsonl"
+
+[training_args_spec]
+run_name = "Qwen2.5 0.5B Online DPO"
+output_dir = "examples/online_dpo/output"
+warmup_steps = 100
+logging_steps = 10
+num_train_epochs = 1
+per_device_train_batch_size = 2
+bf16 = true
+optim = "adamw_bnb_8bit"
+
+learning_rate = 5e-7
+max_new_tokens = 128
+temperature = 0.9
+beta = 0.1
+
+gradient_checkpointing = false
+gradient_accumulation_steps = 1
+save_only_model = true
+load_best_model_at_end = true

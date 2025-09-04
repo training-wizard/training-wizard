@@ -1,0 +1,144 @@
+[project]
+name = "training-wizard"
+version = "1.0.0"
+description = "Declarative ML framework for training and evaluation"
+requires-python = ">=3.11,<4"
+authors = [
+  { name = "Christopher Schölzel", email = "christopher.schoelzel@languagetool.com" },
+  { name = "Robert Veres", email = "robert.veres@languagetool.com" },
+  { name = "Vassilis Palassopoulos", email = "vassilis.palassopoulos@languagetool.com" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+
+dependencies = [
+  "transformers>=4.48",
+  "tqdm>=4.67",
+  "torch>=2",
+  "accelerate>=1.4.0",
+  "datasets>=3.2",
+  "peft>=0.14",
+  "trl>=0.17",
+  "pydantic>=2",
+  "bitsandbytes>=0.45",
+  "mlflow>=2.20",
+  "sentencepiece>=0.2",
+  "structlog>=24.2",
+  "tabulate>=0.9",
+  "more-itertools>=10.6",
+  "torchmetrics>=1.6",
+  "seaborn>=0.13.2",
+  "rapidfuzz>=3.13.0",
+  "optimum>=1.24",
+  "auto-gptq>=0.7",
+  "matplotlib>=3.10.0",
+  "rich>=13.9.4",
+  "tomli-w>=1.2.0",
+]
+
+[project.urls]
+Repository = "https://github.com/quillbot-labs/training-wizard-oss"
+Documentation = "https://github.com/quillbot-labs/training-wizard-oss/blob/main/docs/index.md"
+Changelog = "https://github.com/quillbot-labs/training-wizard-oss/blob/main/CHANGELOG.md"
+Releases = "https://github.com/quillbot-labs/training-wizard-oss/releases"
+
+[dependency-groups]
+dev = ["ruff>=0.9", "ipykernel>=6.29", "ipywidgets>=8.1"]
+test = ["pytest>=8.3"]
+docs = [
+  "mkdocs>=1.6.1",
+  "mkdocstrings[python]>=0.29.0",
+  "mkdocs-material>=9.6.7",
+  "mkdocs-gen-files>=0.5.0",
+  "mkdocs-literate-nav>=0.6.1",
+  "mkdocs-section-index>=0.3.9",
+  "black>=25.1.0",
+  "structlog>=24.2",
+  "mkdocs-autorefs>=1.4.1",
+]
+
+[project.optional-dependencies]
+quantization = [
+  "llmcompressor>=0.3.0,<=0.5.0",
+  "transformers<=4.51.0",
+  "numpy<2",
+]
+
+[project.scripts]
+training-wizard = "training_wizard.commands.training_wizard:training_wizard"
+find-all-linear-names = "training_wizard.commands.find_all_linear_names:find_all_linear_names"
+count-parameters = "training_wizard.commands.count_parameters:main"
+merge-adapter-main-models = "training_wizard.commands.merge_adapter_main_models:main"
+lora-info = "training_wizard.commands.lora_info:main"
+generator = "training_wizard.commands.generator:main"
+train-tokenizer = "training_wizard.commands.train_tokenizer:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["training_wizard"]
+
+[tool.ruff]
+# Allow lines to be as long as 120.
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+  "D",      # pydocstyle
+  "W",      # pycodestyle warnings
+  "E",      # pycodestyle errors
+  "N",      # pep8-naming
+  "I",      # isort
+  "ANN001", # Missing type annotation for function argument
+  "ANN2",   # Missing type annotation for return value
+  "F",      # Pyflakes
+  "UP",     # pyupgrade
+  "RUF",    # Ruff checks
+  "A",      # flake8-builtins (shadowing a Python builtin)
+  "B",      # flake8-bugbear
+  "C4",     # flake8-comprehensions
+  "SIM",    # flake8-simplify
+  "Q",      # flake8-quotes
+  "PIE",    # flake8-pie
+  "T10",    # flake8-debugger
+  "TCH",    # flake8-type-checking
+  "TID",    # flake8-tidy-imports
+  "EXE",    # flake8-executable
+  "G",      # flake8-logging-format
+  "INT",    # flake8-gettext
+  "ISC",    # flake8-implicit-str-concat
+  "FLY",    # flynt
+  "NPY",    # NumPy-specific rules
+  "PD",     # pandas-vet
+  "PERF",   # Perflint
+  "PGH",    # pygrep-hooks
+]
+
+ignore = [
+  "PGH003", # we want to just use `type: ignore`
+  "TID252", # relative imports
+  "B905",   # we want to allow truncating to the length of the shortest iterable
+  "ISC001", # we want to allow implicit string concatenation (consistent with the ruff formatter)
+  "G004",   # logging with f-strings
+  "N812",   # uppercase variables
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Ignore `F401` (unused imports) in all `__init__.py` files.
+"__init__.py" = ["F401"]
+"test_*.py" = ["F403", "F405"]
+"*.ipynb" = ["ALL"]
+
+[tool.ruff.lint.pydocstyle]
+# Use Google docstring style.
+convention = "google"
+
+[tool.ruff.lint.flake8-annotations]
+# Suppress type annotations for none-returning functions.
+suppress-none-returning = true
+
+[tool.ruff.format]
+# Line endings will be converted to `\n`.
+line-ending = "lf"

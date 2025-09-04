@@ -1,0 +1,44 @@
+spec_class = "training_wizard.recipes.modular.ModularTrainingSpec"
+validation = 5
+
+[wizard_module]
+spec_class = "training_wizard.specs.modules.seq2seq.Seq2SeqModule"
+eval_sample_size = 10
+peek_rate = 100
+peek_sample_size = 3
+
+[wizard_module.generation_args]
+max_new_tokens = 128
+do_sample = false
+
+[wizard_module.transformer_spec]
+pretrained_name = "patrickvonplaten/t5-tiny-random"
+
+[wizard_module.transformer_spec.tokenizer_call_kwargs]
+max_length = 256
+truncation = true
+
+[dataset_spec]
+spec_class = "training_wizard.specs.dataset.SimpleDataSourceSpec"
+data_files = "examples/data/seq2seq.jsonl"
+
+[training_args_spec]
+run_name = "DE Standard High Quality mT5-xl v2.5"
+output_dir = "examples/seq2seq/output"
+warmup_steps = 100
+logging_steps = 10
+num_train_epochs = 1
+per_device_train_batch_size = 2
+per_device_eval_batch_size = 2
+bf16 = true
+optim = "adamw_bnb_8bit"
+learning_rate = 5e-5
+gradient_checkpointing = false
+gradient_accumulation_steps = 1
+torch_compile = false
+save_only_model = true
+
+[callbacks_spec]
+enable_early_stopping = true
+early_stopping_patience = 2
+evaluate_first_step = true

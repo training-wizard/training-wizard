@@ -1,0 +1,18 @@
+# Data / model directories
+/experiments/
+/mlruns/
+/examples/*/output/
+
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# gitkeep files to keep empty directories
+!.gitkeep
+
+# Environments
+.env
+.venv
+env/
+venv/

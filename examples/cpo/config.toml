@@ -1,0 +1,52 @@
+# Train the ranker model on the blind eval ranking data
+spec_class = "training_wizard.recipes.cpo.CPOTrainingSpec"
+validation = 5
+
+[transformer_spec]
+pretrained_name = "llamafactory/tiny-random-Llama-3"
+
+[transformer_spec.tokenizer_call_kwargs]
+max_length = 1024
+truncation = true
+
+[dataset_spec]
+spec_class = "training_wizard.specs.dataset.TemplatePreferenceDatasourceSpec"
+
+prompt_template = [
+    { role = "system", content = "You are multilingual paraphraser. User inputs are wrapped in <pphr_input>...</pphr_input> tags. Always answer with a paraphrase, wrapped in <pphr_output>...</pphr_output> tags." },
+    { role = "user", content = "<pphr_input>{input}</pphr_input>" },
+]
+
+chosen_template = [
+    { role = "assistant", content = "<pphr_output>{chosen}</pphr_output>" },
+]
+
+rejected_template = [
+    { role = "assistant", content = "<pphr_output>{rejected}</pphr_output>" },
+]
+
+[dataset_spec.parent]
+spec_class = "training_wizard.specs.dataset.SimpleDataSourceSpec"
+data_files = "examples/data/ranking.jsonl"
+
+[training_args_spec]
+run_name = "Qwen 0.5B Instruct CPO"
+output_dir = "examples/cpo/output"
+warmup_steps = 100
+logging_steps = 10
+num_train_epochs = 1
+per_device_train_batch_size = 2
+per_device_eval_batch_size = 2
+bf16 = true
+optim = "adamw_bnb_8bit"
+
+max_length = 1024
+max_prompt_length = 512
+beta = 0.1
+cpo_alpha = 1.0
+simpo_gamma = 0.5
+loss_type = "simpo"
+
+gradient_checkpointing = false
+gradient_accumulation_steps = 1
+save_only_model = true

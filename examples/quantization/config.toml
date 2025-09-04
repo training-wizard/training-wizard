@@ -1,0 +1,30 @@
+spec_class = "training_wizard.recipes.quantize_llm.LLMQuantizationSpec"
+
+output_dir = "examples/quantization/output"
+scheme = "W8A8"                             #Can also be "W4A16", check the recipe class.
+num_calibration_samples = 4                 # Use 512 for real
+batch_size = 1
+
+[wizard_module]
+spec_class = "training_wizard.specs.modules.causal_seq2seq.CausalSeq2SeqModule"
+eval_sample_size = 0
+separator_token = "<sep>"
+
+[wizard_module.generation_args]
+max_new_tokens = 256
+do_sample = false
+stop_strings = "\n\n"
+
+[wizard_module.transformer_spec]
+pretrained_name = "Qwen/Qwen2.5-0.5B-Instruct" # Can also be local path to a trained LLM
+
+[wizard_module.transformer_spec.tokenizer_init_kwargs]
+padding_side = "left"
+
+[wizard_module.transformer_spec.tokenizer_call_kwargs]
+max_length = 512
+truncation = true
+
+[dataset_spec]
+spec_class = "training_wizard.specs.dataset.SimpleDataSourceSpec"
+data_files = "examples/data/seq2seq.jsonl"
