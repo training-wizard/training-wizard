@@ -22,13 +22,3 @@ You are free to:
 
 as long as you **give appropriate credit**, provide a link to the license, and indicate if changes were made.  
 For more details, see the [CC BY 4.0 license page](https://creativecommons.org/licenses/by/4.0/).
-
----
-
-## Contributor License Agreement
-
-Before we can accept your first contribution, you will need to sign our **Contributor License Agreement (CLA)**.  
-This ensures that we can distribute your contributions under the same open source license as the rest of the project.
-
-- Please review the *Individual Contributor License Agreement* for individuals or the *Entity Contributor License Agreement* for legal entities available under `/LEGAL` in the git repository.
-- By submitting a pull request, you confirm that you have read and signed the CLA.
