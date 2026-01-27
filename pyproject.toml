@@ -4,9 +4,9 @@ version = "1.0.0"
 description = "Declarative ML framework for training and evaluation"
 requires-python = ">=3.11,<4"
 authors = [
-  { name = "Christopher Schölzel", email = "christopher.schoelzel@languagetool.com" },
-  { name = "Robert Veres", email = "robert.veres@languagetool.com" },
-  { name = "Vassilis Palassopoulos", email = "vassilis.palassopoulos@languagetool.com" },
+  { name = "Christopher Schölzel", email = "christopher.schoelzel@mailbox.org" },
+  { name = "Robert Veres", email = "robert.veres00@gmail.com" },
+  { name = "Vassilis Palassopoulos", email = "palasso@gmail.com" },
 ]
 license = { file = "LICENSE" }
 readme = "README.md"
