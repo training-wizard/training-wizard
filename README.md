@@ -68,12 +68,6 @@ accelerate launch -m training_wizard examples/[recipe]/config.toml
 
 Contributions are welcome! If you've built something that would improve Training Wizard, please open a pull request.
 
-Before we can accept your first contribution, you will need to sign our **Contributor License Agreement (CLA)**.  
-This ensures that we can distribute your contributions under the same open source license as the rest of the project.
-
-- Please review the [Individual Contributor License Agreement](./LEGAL/Individual-CLA.md) for individuals or the [Entity Contributor License Agreement](./LEGAL/Entity-CLA.md) for legal entities.
-- By submitting a pull request, you confirm that you have read and signed the CLA.
-
 ## Licenses
 
 This project uses a **dual-license model**:
