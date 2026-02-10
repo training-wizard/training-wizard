@@ -1,0 +1,1203 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../coding_conventions/">
+      
+      
+        <link rel="next" href="../pydantic/">
+      
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>VS Code Tips - Training Wizard</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M11%209h2V7h-2m1%2013c-4.41%200-8-3.59-8-8s3.59-8%208-8%208%203.59%208%208-3.59%208-8%208m0-18A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202m-1%2015h2v-6h-2z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../assets/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vs-code-tips" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Training Wizard" class="md-header__button md-logo" aria-label="Training Wizard" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Training Wizard
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              VS Code Tips
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="light-blue"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/training-wizard/training-wizard" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    training-wizard
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../concepts/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Concepts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  For Developers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../legal_terms/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Legal Terms
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Training Wizard" class="md-nav__button md-logo" aria-label="Training Wizard" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Training Wizard
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/training-wizard/training-wizard" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    training-wizard
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../concepts/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Concepts
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/complexity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Managing Complexity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/recipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recipes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/toml_config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TOML Configs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/spec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Specs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    For Developers
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            For Developers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coding_conventions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Coding conventions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    VS Code Tips
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    VS Code Tips
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core extensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful extensions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pydantic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pydantic Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../regex-python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Regular Expressions in Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../legal_terms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Legal Terms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extensions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core extensions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-extensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Useful extensions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="vs-code-tips">VS Code tips<a class="headerlink" href="#vs-code-tips" title="Permanent link">¤</a></h1>
+<p>The following consist of optional suggestions for configuring VS Code as well as for installing helpful extensions to it. If you use VS Code as your code editor for contributing to this project you may find them useful.</p>
+<h2 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">¤</a></h2>
+<p>An easy way to add settings to VS Code is to declare them in the JSON settings file (F1 → Open User Settings (JSON)). However, if you are unsure about messing with JSON, you can also search for the name of the individual settings in the normal settings UI (F1 → Open User Settings).</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;files.autoSave&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;afterDelay&quot;</span><span class="p">,</span>
+<span class="nt">&quot;editor.rulers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="mi">120</span>
+<span class="p">],</span>
+<span class="nt">&quot;python.analysis.typeCheckingMode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;basic&quot;</span><span class="p">,</span>
+<span class="nt">&quot;github.gitProtocol&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ssh&quot;</span><span class="p">,</span>
+<span class="nt">&quot;python.testing.pytestEnabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="nt">&quot;autoDocstring.docstringFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;google-notypes&quot;</span><span class="p">,</span>
+<span class="nt">&quot;evenBetterToml.schema.enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Layers of settings</p>
+<p>There are different <em>layers</em> of settings. Depending on the scope you want these settings to have, you can apply them at the “User” level, “Remote”, “Workspace” or in a specific folder.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Hierarchy of layers of settings</p>
+<ul>
+<li>
+<p>As mentioned, there are different levels of settings. The hierarchy is as follows: User → Remote → Workspace → Folder. The User settings are on top and apply globally to any instance of VS Code you open.</p>
+</li>
+<li>
+<p>Each level down becomes more specific, with its settings overriding those of “higher levels”. So, if you change a value in the Remote settings that also exists in the User settings, the Remote value will take precedence. Of course, this value would only apply to the currently open Remote instance.</p>
+</li>
+<li>Similarly with Workspace and Folder. A Workspace is a project you have open. Note that workspace settings are stored at the root of the project in a <code>.vscode</code> folder.</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Settings for extensions</p>
+<p>Some of these settings apply to optional extensions. If you don't have those extensions, these settings will just be ignored. You can still safely copy the string below into your settings file.</p>
+</div>
+<h2 id="extensions">Extensions<a class="headerlink" href="#extensions" title="Permanent link">¤</a></h2>
+<h3 id="core-extensions">Core extensions<a class="headerlink" href="#core-extensions" title="Permanent link">¤</a></h3>
+<p>We list these extensions with their unique identifier (like <code>ms-python.python</code>), so that you can easily install them from the command line or add them to the <code>remote.SSH.defaultExtensions</code> setting. You can also use that identifier to find the extension in the normal extension view (F1 → Extensions: Install Extensions).</p>
+<p>Install via CLI:</p>
+<div class="highlight"><pre><span></span><code>code<span class="w"> </span>--install-extension<span class="w"> </span>ms-python.python<span class="w">                              </span><span class="c1"># Python support</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>ms-vscode-remote.vscode-remote-extensionpack<span class="w">  </span><span class="c1"># Remote Development extension pack</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>GitHub.vscode-pull-request-github<span class="w">             </span><span class="c1"># GitHub Pull Requests and Issues</span>
+</code></pre></div>
+<p>Add to default extensions (F1 → Open User Settings (JSON)):</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;remote.SSH.defaultExtensions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="s2">&quot;ms-python.python&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;GitHub.vscode-pull-request-github&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+</code></pre></div>
+<h3 id="useful-extensions">Useful extensions<a class="headerlink" href="#useful-extensions" title="Permanent link">¤</a></h3>
+<p>These are not mandatory, but helpful in a lot of cases.</p>
+<p>Install via CLI:</p>
+<div class="highlight"><pre><span></span><code>code<span class="w"> </span>--install-extension<span class="w"> </span>ms-vscode-remote.vscode-remote-extensionpack<span class="w">  </span><span class="c1"># Remote Development extension pack</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>ms-python.python<span class="w">                   </span><span class="c1"># Python extension</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>ms-toolsai.jupyter<span class="w">                 </span><span class="c1"># Jupyter extension</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>charliermarsh.ruff<span class="w">                 </span><span class="c1"># Ruff linter extension</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>eamodio.gitlens<span class="w">                    </span><span class="c1"># GitLens extension (code insights via git history)</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>mhutchie.git-graph<span class="w">                 </span><span class="c1"># A graphical git log</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>rioj7.command-variable<span class="w">             </span><span class="c1"># Needed for the &quot;Current Module&quot; debug profile</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>ryu1kn.partial-diff<span class="w">                </span><span class="c1"># Create diff of sections within files</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>njpwerner.autodocstring<span class="w">            </span><span class="c1"># Generate docstrings from function signature</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>kevinrose.vsc-python-indent<span class="w">        </span><span class="c1"># Helps getting Python indentations right</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>GitHub.vscode-pull-request-github<span class="w">  </span><span class="c1"># GitHub Pull Requests and Issues</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>GitHub.copilot<span class="w">                     </span><span class="c1"># GitHub Copilot</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>GitLab.gitlab-workflow<span class="w">             </span><span class="c1"># GitLab Workflow</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>mtxr.sqltools<span class="w">                      </span><span class="c1"># Facilitates working with SQL databases</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>mtxr.sqltools-driver-mysql<span class="w">         </span><span class="c1"># MySQL driver for SQLTools extension</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>ms-azuretools.vscode-docker<span class="w">        </span><span class="c1"># Docker support for VS Code</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>tamasfe.even-better-toml<span class="w">           </span><span class="c1"># TOML Language Support</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>redhat.vscode-xml<span class="w">                  </span><span class="c1"># XML Language Support</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>redhat.vscode-yaml<span class="w">                 </span><span class="c1"># YAML Language Support</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>yzhang.markdown-all-in-one<span class="w">         </span><span class="c1"># Markdown Language Support</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>howcasperwhat.comment-formula<span class="w">      </span><span class="c1"># LaTeX formulas in comments rendered in pop-up</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>bierner.emojisense<span class="w">                 </span><span class="c1"># Search for emojis</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>brunnerh.insert-unicode<span class="w">            </span><span class="c1"># Search for Unicode characters</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>GrapeCity.gc-excelviewer<span class="w">           </span><span class="c1"># Spreadsheet Viewer for csv/tsv/xls files</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>bierner.markdown-mermaid<span class="w">           </span><span class="c1"># Supports Mermaid diagrams in Markdown preview</span>
+code<span class="w"> </span>--install-extension<span class="w"> </span>ms-vscode.wordcount<span class="w">                </span><span class="c1"># Adds word count to status bar</span>
+</code></pre></div>
+<p>If you use a remote server it is not necessary to do this again in the remote server.
+Add to SSH default extensions when using a remote server (F1 → Open User Settings (JSON)):</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;remote.SSH.defaultExtensions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;ms-python.python&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;ms-toolsai.jupyter&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;charliermarsh.ruff&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;eamodio.gitlens&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;mhutchie.git-graph&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;rioj7.command-variable&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;ryu1kn.partial-diff&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;njpwerner.autodocstring&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;kevinrose.vsc-python-indent&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;GitHub.vscode-pull-request-github&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;GitHub.copilot&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;GitLab.gitlab-workflow&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;mtxr.sqltools&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;mtxr.sqltools-driver-mysql&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;ms-azuretools.vscode-docker&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;tamasfe.even-better-toml&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;redhat.vscode-xml&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;redhat.vscode-yaml&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;yzhang.markdown-all-in-one&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;howcasperwhat.comment-formula&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;bierner.emojisense&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;brunnerh.insert-unicode&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;valentjn.vscode-ltex&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;GrapeCity.gc-excelviewer&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;bierner.markdown-mermaid&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;ms-vscode.wordcount&quot;</span>
+<span class="p">]</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../coding_conventions/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Coding conventions">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Coding conventions
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../pydantic/" class="md-footer__link md-footer__link--next" aria-label="Next: Pydantic Troubleshooting">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Pydantic Troubleshooting
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 Training Wizard —
+Documentation licensed under 
+<a href="https://creativecommons.org/licenses/by/4.0/">
+  <img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="height:16px; vertical-align:middle;">
+  CC BY 4.0
+</a>
+
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "header.autohide", "toc.follow"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>

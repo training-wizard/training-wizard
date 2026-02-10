@@ -1,0 +1,1380 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../vs-code/">
+      
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Coding conventions - Training Wizard</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M11%209h2V7h-2m1%2013c-4.41%200-8-3.59-8-8s3.59-8%208-8%208%203.59%208%208-3.59%208-8%208m0-18A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202m-1%2015h2v-6h-2z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../assets/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#coding-conventions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Training Wizard" class="md-header__button md-logo" aria-label="Training Wizard" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Training Wizard
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Coding conventions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="light-blue"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/training-wizard/training-wizard" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    training-wizard
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../concepts/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Concepts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  For Developers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../legal_terms/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Legal Terms
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Training Wizard" class="md-nav__button md-logo" aria-label="Training Wizard" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Training Wizard
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/training-wizard/training-wizard" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    training-wizard
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../concepts/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Concepts
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/complexity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Managing Complexity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/recipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recipes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/toml_config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TOML Configs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../concepts/spec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Specs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    For Developers
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            For Developers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Coding conventions
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Coding conventions
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pep8" class="md-nav__link">
+    <span class="md-ellipsis">
+      📖 PEP8
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting-of-docstrings" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✍️ Formatting of docstrings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linting" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛟 Linting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🇹 Typing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖊️ Dependency management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-python-migrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐍 Future Python migrations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#readme" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 README
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤝 Contributing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      🇻 Versioning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗒️ Changelog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Unit tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-style-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎩 Other style guides
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vs-code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VS Code Tips
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pydantic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pydantic Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../regex-python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Regular Expressions in Python
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../legal_terms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Legal Terms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pep8" class="md-nav__link">
+    <span class="md-ellipsis">
+      📖 PEP8
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatting-of-docstrings" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✍️ Formatting of docstrings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linting" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛟 Linting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🇹 Typing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖊️ Dependency management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-python-migrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐍 Future Python migrations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#readme" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 README
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤝 Contributing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#versioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      🇻 Versioning
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changelog" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗒️ Changelog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Unit tests
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-style-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎩 Other style guides
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="coding-conventions">Coding conventions<a class="headerlink" href="#coding-conventions" title="Permanent link">¤</a></h1>
+<p>Here we collect all the coding conventions and best practices that we want to follow. This mainly concerns Python code, but can also include conventions for other parts of the code.</p>
+<h2 id="pep8">📖 PEP8<a class="headerlink" href="#pep8" title="Permanent link">¤</a></h2>
+<p>Most style questions for Python are governed by <a href="https://peps.python.org/pep-0008/">PEP8</a>, which we adopt with some exceptions (see below).</p>
+<p>If you find yourself hard to keep up with PEP8, then you can use the <code>ruff</code> formatter. It allows you to think less about formatting and more about the code you write, as it will auto-format the files you are working on. If you use VS Code, you can install the official ruff extension for VS Code. For more details on a set of recommended extensions, read <a href="../vs-code/">VS Code tips</a>.</p>
+<p><strong>⤴️ Exceptions to PEP8 rules</strong></p>
+<ul>
+<li>The goal of coding conventions is improving readability and maintainability, not uniformity at all costs. Therefore, every rule can be broken when it would otherwise hinder readability. This also may be an argument against using formatters because they do not allow for such flexibility.</li>
+<li>Line length: 79 characters is quite restrictive and only makes sense when working from small terminal windows or when having multiple editors side by side. For our projects, 120 characters are perfectly fine.</li>
+</ul>
+<h2 id="formatting-of-docstrings">✍️ Formatting of docstrings<a class="headerlink" href="#formatting-of-docstrings" title="Permanent link">¤</a></h2>
+<p>We use <a href="https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings">google-style notypes docstrings</a>. They may be used by <code>mkdocstrings</code> to generate API documentation (along with the method's signature).</p>
+<p>We always use type hints in the method's signature. The types of parameters and return values should not be mentioned in the docstring. It is preferable to only have one source for each piece of information to avoid conflicting information (otherwise when a method's signature changes, both places would need updating). Also it makes the docstring look less verbose.</p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_token_action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">token</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">prob</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">sugg_token</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get a suggested action for a token.</span>
+
+<span class="sd">    This method returns a suggested action for a token.</span>
+<span class="sd">    The action is represented as a tuple of 4 elements:</span>
+<span class="sd">        starting position, ending position, replacement token, probability of taking the action.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        token: token.</span>
+<span class="sd">        index: index of token in sentence.</span>
+<span class="sd">        prob: probability of requesting the action.</span>
+<span class="sd">        sugg_token: suggested token.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: if `sugg_token` is unknown.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Suggested action for token.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</code></pre></div>
+<h2 id="linting">🛟 Linting<a class="headerlink" href="#linting" title="Permanent link">¤</a></h2>
+<p>A linter is a tool that can help you follow PEP8, as well as proper formatting of docstrings and provide warnings for many other cases.</p>
+<p>We use the ruff linter. If you use VS Code, you can install the official ruff extension for VS Code. For more details on a set of recommended extensions, read <a href="../vs-code/">VS Code tips</a>.</p>
+<p>A project using ruff should have it in its development dependencies:</p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">[dependency-groups]</span>
+<span class="n">dev</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ruff&gt;=0.9&quot;</span><span class="p">]</span>
+</code></pre></div>
+<p>The ruff settings are declared within the <code>pyproject.toml</code> file. Some recommended settings for the ruff linter are specified below.</p>
+<p><strong>Recommended settings</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">[tool.ruff]</span>
+<span class="c1"># Allow lines to be as long as 120.</span>
+<span class="n">line-length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">120</span>
+
+<span class="k">[tool.ruff.lint]</span>
+<span class="n">select</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;D&quot;</span><span class="p">,</span><span class="w">      </span><span class="c1"># pydocstyle</span>
+<span class="w">    </span><span class="s2">&quot;W&quot;</span><span class="p">,</span><span class="w">      </span><span class="c1"># pycodestyle warnings</span>
+<span class="w">    </span><span class="s2">&quot;E&quot;</span><span class="p">,</span><span class="w">      </span><span class="c1"># pycodestyle errors</span>
+<span class="w">    </span><span class="s2">&quot;N&quot;</span><span class="p">,</span><span class="w">      </span><span class="c1"># pep8-naming</span>
+<span class="w">    </span><span class="s2">&quot;I&quot;</span><span class="p">,</span><span class="w">      </span><span class="c1"># isort</span>
+<span class="w">    </span><span class="s2">&quot;ANN001&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1"># Missing type annotation for function argument</span>
+<span class="w">    </span><span class="s2">&quot;ANN2&quot;</span><span class="p">,</span><span class="w">   </span><span class="c1"># Missing type annotation for return value</span>
+<span class="w">    </span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="w">      </span><span class="c1"># Pyflakes</span>
+<span class="w">    </span><span class="s2">&quot;UP&quot;</span><span class="p">,</span><span class="w">     </span><span class="c1"># pyupgrade</span>
+<span class="w">    </span><span class="s2">&quot;RUF&quot;</span><span class="p">,</span><span class="w">    </span><span class="c1"># Ruff checks</span>
+<span class="w">    </span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="w">      </span><span class="c1"># flake8-builtins (shadowing a Python builtin)</span>
+<span class="w">    </span><span class="s2">&quot;B&quot;</span><span class="p">,</span><span class="w">      </span><span class="c1"># flake8-bugbear</span>
+<span class="w">    </span><span class="s2">&quot;C4&quot;</span><span class="p">,</span><span class="w">     </span><span class="c1"># flake8-comprehensions</span>
+<span class="w">    </span><span class="s2">&quot;SIM&quot;</span><span class="p">,</span><span class="w">    </span><span class="c1"># flake8-simplify</span>
+<span class="w">    </span><span class="s2">&quot;Q&quot;</span><span class="p">,</span><span class="w">      </span><span class="c1"># flake8-quotes</span>
+<span class="w">    </span><span class="s2">&quot;PIE&quot;</span><span class="p">,</span><span class="w">    </span><span class="c1"># flake8-pie</span>
+<span class="w">    </span><span class="s2">&quot;T10&quot;</span><span class="p">,</span><span class="w">    </span><span class="c1"># flake8-debugger</span>
+<span class="w">    </span><span class="s2">&quot;TCH&quot;</span><span class="p">,</span><span class="w">    </span><span class="c1"># flake8-type-checking</span>
+<span class="w">    </span><span class="s2">&quot;TID&quot;</span><span class="p">,</span><span class="w">    </span><span class="c1"># flake8-tidy-imports</span>
+<span class="w">    </span><span class="s2">&quot;EXE&quot;</span><span class="p">,</span><span class="w">    </span><span class="c1"># flake8-executable</span>
+<span class="w">    </span><span class="s2">&quot;G&quot;</span><span class="p">,</span><span class="w">      </span><span class="c1"># flake8-logging-format</span>
+<span class="w">    </span><span class="s2">&quot;INT&quot;</span><span class="p">,</span><span class="w">    </span><span class="c1"># flake8-gettext</span>
+<span class="w">    </span><span class="s2">&quot;ISC&quot;</span><span class="p">,</span><span class="w">    </span><span class="c1"># flake8-implicit-str-concat</span>
+<span class="w">    </span><span class="s2">&quot;FLY&quot;</span><span class="p">,</span><span class="w">    </span><span class="c1"># flynt</span>
+<span class="w">    </span><span class="s2">&quot;NPY&quot;</span><span class="p">,</span><span class="w">    </span><span class="c1"># NumPy-specific rules</span>
+<span class="w">    </span><span class="s2">&quot;PD&quot;</span><span class="p">,</span><span class="w">     </span><span class="c1"># pandas-vet</span>
+<span class="w">    </span><span class="s2">&quot;PERF&quot;</span><span class="p">,</span><span class="w">   </span><span class="c1"># Perflint</span>
+<span class="w">    </span><span class="s2">&quot;PGH&quot;</span><span class="p">,</span><span class="w">    </span><span class="c1"># pygrep-hooks</span>
+<span class="p">]</span>
+
+<span class="n">ignore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;PGH003&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1"># we want to just use `type: ignore`</span>
+<span class="w">    </span><span class="s2">&quot;TID252&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1"># relative imports</span>
+<span class="p">]</span>
+
+<span class="k">[tool.ruff.lint.per-file-ignores]</span>
+<span class="c1"># Ignore `F401` (unused imports) in all `__init__.py` files.</span>
+<span class="s2">&quot;__init__.py&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;F401&quot;</span><span class="p">]</span>
+<span class="s2">&quot;**/*.ipynb&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ALL&quot;</span><span class="p">]</span>
+
+<span class="k">[tool.ruff.lint.pydocstyle]</span>
+<span class="c1"># Use Google docstring style.</span>
+<span class="n">convention</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;google&quot;</span>
+
+<span class="k">[tool.ruff.lint.flake8-annotations]</span>
+<span class="c1"># Suppress type annotations for none-returning functions.</span>
+<span class="n">suppress-none-returning</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+
+<span class="k">[tool.ruff.format]</span>
+<span class="c1"># Line endings will be converted to `\n`.</span>
+<span class="n">line-ending</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;lf&quot;</span>
+</code></pre></div>
+<h2 id="typing">🇹 Typing<a class="headerlink" href="#typing" title="Permanent link">¤</a></h2>
+<p>Python supports <a href="https://docs.python.org/3/library/typing.html">type hints</a> via the <code>typing</code> module. It is encouraged to add them as they can help to document methods and functions and spot errors before running your code.</p>
+<p>We use the new typing syntax that doesn't require the <code>typing</code> module for most things.</p>
+<p>We always use type hints in the method's signature. The local variables <em>within</em> a function do not need to be annotated, unless it is a complicated case that would increase understanding of the code.</p>
+<p>In VS Code we use Pylance's basic type checking mode. We will evaluate in the future astral's type checker or mypy.</p>
+<p><strong>Annotations and co_annotations</strong></p>
+<p>We do not use <a href="https://peps.python.org/pep-0563/">“annotations”</a> or <a href="https://peps.python.org/pep-0649/">“co_annotations”</a> yet for forward references and other cool stuff until they are supported by CPython (without a <code>from __future__</code> import). This will happen in <a href="https://docs.python.org/3.14/whatsnew/3.14.html#whatsnew314-pep649">CPython 3.14</a> and when we make 3.14 our minimum supported version we will use them. For now, we stringify such cases.</p>
+<h2 id="dependency-management">🖊️ Dependency management<a class="headerlink" href="#dependency-management" title="Permanent link">¤</a></h2>
+<p>For dependency management, we are using <a href="https://docs.astral.sh/uv/">uv</a>. It combines the features of <a href="https://docs.python.org/3/library/venv.html">Python venv</a> and pip while still managing the dependencies in the standard (<a href="https://peps.python.org/pep-0621/">PEP 621</a>) <code>pyproject.toml</code> file format in a single location along with a lock file. We are following all the adopted PEPs that are <a href="https://packaging.python.org/en/latest/specifications/">PyPA specifications</a>.</p>
+<h2 id="future-python-migrations">🐍 Future Python migrations<a class="headerlink" href="#future-python-migrations" title="Permanent link">¤</a></h2>
+<p>We use CPython 3.11 as the minimum supported version.</p>
+<p>If we know that some code can be written better in a newer CPython release, we make a comment that starts with <code># TODO: py</code>  (case-insensitive) and describing how we would have done it in the newer CPython release. e.g. <code># TODO: Python 3.11 porting: Import "StrEnum" from enum instead of defining it below.</code>. </p>
+<h2 id="readme">📄 README<a class="headerlink" href="#readme" title="Permanent link">¤</a></h2>
+<p>The README should contain enough information for a new developer to onboard to the project to the point where they can run some examples in the code. It should at least contain a full installation description.</p>
+<p>Apart from that, the README should also describe all major features of the project and should be updated accordingly when a new feature is added.</p>
+<p><strong>Minimal requirements for the README</strong></p>
+<ul>
+<li>The file should start with a few sentences that explain what the repository is there for.</li>
+<li>The README should contain instructions on how to install it and run all the major workflows covered by the repository.</li>
+<li>These instructions can be minimal in the form of shell snippets. If they are, however, a more detailed explanation for onboarding should be found in additional documents in the <code>docs</code> folder and there should be links to this information in the main README.</li>
+</ul>
+<h2 id="contributing">🤝 Contributing<a class="headerlink" href="#contributing" title="Permanent link">¤</a></h2>
+<p>If the repository does not have a <code>CONTRIBUTING.md</code> file yet, assume that this was an oversight due to time constraints and create one. 😉</p>
+<p>A <code>CONTRIBUTING.md</code> file documents all major development workflows. This does not pertain to installing and running the code in the repo, but to everything one has to keep in mind when adding code to the repository.</p>
+<p>At the minimum, <code>CONTRIBUTING.md</code> should detail all steps required to release a new version of the repository. If the repository uses CI scripts, these should be explained here.</p>
+<h2 id="versioning">🇻 Versioning<a class="headerlink" href="#versioning" title="Permanent link">¤</a></h2>
+<p>The versioning scheme of the project depends on how the project is being consumed. There are two cases:</p>
+<ol>
+<li>If it is a library that has stable API &amp; CLI assurances defined then it should be <a href="https://semver.org/">SemVer</a> to signal that.<ol>
+<li>it is good to add a small definition of what are the changes that should trigger a MINOR or a MAJOR version change.</li>
+</ol>
+</li>
+<li>If it is a program that isn't a dependency of another project, then it should be <a href="https://calver.org/">CalVer</a>.</li>
+</ol>
+<h2 id="changelog">🗒️ Changelog<a class="headerlink" href="#changelog" title="Permanent link">¤</a></h2>
+<p>If the repository does not have a changelog yet, assume that this was an oversight due to time constraints and create one. 😉</p>
+<p>We use the format from <a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>.</p>
+<p>It is good to categorize changes to quickly identify those that may have affected a change or introduced a particular bug. Emojis are a good way to accomplish that since they are immediately recognizable but take up only one character of space. If the changelog uses Emojis for categorization, it should explain the meaning of each symbol at the top.</p>
+<p>As a general rule, the changelog should be updated every time a pull request is merged into the repository or an issue is closed.</p>
+<h2 id="unit-tests">✅ Unit tests<a class="headerlink" href="#unit-tests" title="Permanent link">¤</a></h2>
+<p>We use <code>pytest</code> for unit tests.</p>
+<p><strong>Minimal requirements for unit tests</strong></p>
+<ul>
+<li>The repository should have at least one unit test that covers the main workflow of that repository.</li>
+<li>If a PR introduces code that is not covered by existing unit tests, a new unit test should be added.</li>
+<li>If a PR introduces a function or class with code that is difficult to understand at first glance, that code should be covered by a unit test.</li>
+<li>Each unit test needs at least one sentence in its docstring that explains the hypothesis that is being covered by the test.</li>
+</ul>
+<h2 id="other-style-guides">🎩 Other style guides<a class="headerlink" href="#other-style-guides" title="Permanent link">¤</a></h2>
+<ul>
+<li>When in doubt, the <a href="https://google.github.io/styleguide/pyguide.html">Google style guide for Python code</a> is always a good resource.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: About">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                About
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../vs-code/" class="md-footer__link md-footer__link--next" aria-label="Next: VS Code Tips">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                VS Code Tips
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © 2025 Training Wizard —
+Documentation licensed under 
+<a href="https://creativecommons.org/licenses/by/4.0/">
+  <img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="height:16px; vertical-align:middle;">
+  CC BY 4.0
+</a>
+
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.indexes", "navigation.footer", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "header.autohide", "toc.follow"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
