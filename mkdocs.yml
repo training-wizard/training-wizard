@@ -1,7 +1,7 @@
 site_name: "Training Wizard"
 site_dir: public
-repo_url: https://github.com/quillbot-labs/training-wizard-oss
-repo_name: quillbot-labs/training-wizard-oss
+repo_url: https://github.com/training-wizard/training-wizard
+repo_name: training-wizard/training-wizard
 
 copyright: |
     © 2025 Training Wizard —

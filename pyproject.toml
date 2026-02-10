@@ -37,10 +37,10 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/quillbot-labs/training-wizard-oss"
-Documentation = "https://github.com/quillbot-labs/training-wizard-oss/blob/main/docs/index.md"
-Changelog = "https://github.com/quillbot-labs/training-wizard-oss/blob/main/CHANGELOG.md"
-Releases = "https://github.com/quillbot-labs/training-wizard-oss/releases"
+Repository = "https://github.com/training-wizard/training-wizard"
+Documentation = "https://training-wizard.github.io/training-wizard"
+# Changelog = "https://github.com/training-wizard/training-wizard/blob/main/CHANGELOG.md"
+# Releases = "https://github.com/training-wizard/training-wizard/releases"
 
 [dependency-groups]
 dev = ["ruff>=0.9", "ipykernel>=6.29", "ipywidgets>=8.1"]
